@@ -45,16 +45,42 @@
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                                             {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-start </small>
-                                        </div>
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                            {% else %}
+                                               <small class="text-muted">No Rating</small>
+                                               {% endif %}
+                                            </div>
                                      </div>
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
+                        {% if forloop.counter|divisibleby:1 %}   
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr>
+                            </div>
+                            {% endif %}
+                            {% if forloop.counter|divisible:2 %}    
+                                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                    <hr>
+
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisible:3 %}
+                                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:4 %}
+                                <div class="col-12 d-none d-xl-block mb-5">
+                                    <hr>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+
+                    </div>
                 </div>
             </div>              
         </div>
-        </div>
+        
 {% endblock %}
 
