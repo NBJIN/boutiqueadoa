@@ -2,8 +2,6 @@ html {
     height: 100%;
 }
 
-/* the above will allow our h100 and vertical centering classes to work */
-
 body {
     background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -12,9 +10,7 @@ body {
     font-family: 'Lato';
 }
 
-/* */
-
-/* from Bulma - icon class from bluma simmlar css framework always stay center and consitent siz e */
+/* from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -25,11 +21,11 @@ body {
 
 .logo-font {
     text-transform: uppercase;
-} /* have consistently on the size with logo font  */
+}
 
 .main-logo-link {
     width: fit-content;
-}  /* logo only takes up as much space as the text requires */
+}
 
 .shop-now-button {
     background: black;
@@ -52,7 +48,7 @@ body {
 .btn-outline-black:active,
 .btn-outline-black:focus {
     background: black;
-    color: white !important; 
+    color: white !important;
 }
 
 .shop-now-button:hover,
@@ -77,19 +73,33 @@ body {
     background: #000 !important;
 }
 
-.overlay  {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
 }
 
 /* -------------------------------- Media Queries */
@@ -99,18 +109,6 @@ a.category-badge > span.badge:hover {
   .container {
     max-width: 80%;
   }
-}
-
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px; 
-}
-
-.btt-link {
-    cursor: pointer;
 }
 
 /* fixed top navbar only on medium and up */
@@ -128,16 +126,13 @@ a.category-badge > span.badge:hover {
     }
 }
 
-/* the top a bit when navbar is collapsed on mobile */
+/* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
-
     }
 
     body {
         height: calc(100vh - 116px);
     }
 }
-
-
