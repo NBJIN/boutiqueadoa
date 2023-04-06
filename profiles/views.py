@@ -7,4 +7,3 @@ def profile(request):
     context = {}
 
     return render(request, template, context)
-    
