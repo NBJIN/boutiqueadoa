@@ -7,7 +7,7 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'  # <!-- fix the spelling of category in admin-->
 
     name = models.CharField(max_length=254)
-    friendly_name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
